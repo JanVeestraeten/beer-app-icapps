@@ -1,0 +1,11 @@
+{
+    "app_name": "Beer App Icapps",
+    "back": "Back",
+    "cancel": "Cancel",
+    "network_error_something_went_wrong": "Something went wrong, please try again later.",
+    "network_error_no_internet_connection": "Check your internet connection.",
+    "network_error_no_authentication": "U bent niet geauthenticeerd",
+    "error_default": "Something went wrong",
+    "network_error": "Check your internet connection.",
+    "login_error": "Something went wrong with authenticating the app, please try again later."
+}

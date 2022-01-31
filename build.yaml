@@ -1,0 +1,40 @@
+targets:
+  $default:
+          # disable the default generators, we'll only use the non-shared drift generator here
+    auto_apply_builders: true
+    builders:
+      # json_serializable|json_serializable:
+      #   enabled: true
+      #   generate_for:
+      #     - "lib/networking/oauth.dart"
+      # connection
+      drift_dev:
+        options:
+            generate_connect_constructor: true
+            apply_converters_on_variables: true
+      drift_dev|not_shared:
+        enabled: true
+        options:
+            generate_connect_constructor: true
+            apply_converters_on_variables: true
+        # If needed, you can configure the builder like this:
+        # options:
+        #   skip_verification_code: true
+        #   use_experimental_inference: true
+      # This builder is necessary for drift-file preprocessing. You can disable it if you're not
+      # using .drift files with type converters.
+      drift_dev|preparing_builder:
+        enabled: true
+        options:
+            generate_connect_constructor: true
+            apply_converters_on_variables: true
+  
+  # run_built_value:
+  #   dependencies: ['mobx']
+  #   builders:
+  #     # Disable drift builders. By default, those would run on each target
+  #     drift_dev:
+  #       enabled: false
+  #     drift_dev|preparing_builder:
+  #       enabled: false
+  #     # we don't need to disable drift|not_shared, because it's disabled by default
