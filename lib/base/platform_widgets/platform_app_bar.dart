@@ -32,13 +32,6 @@ class PlatformAppBar extends PlatformWidget<CupertinoNavigationBar, AppBar>
         border: showBorder ? const Border(bottom: BorderSide(width: 1)) : null,
         backgroundColor: backgroundColor,
         previousPageTitle: previousPageTitle ?? S.of(context).back,
-        leading: iconTheme == null
-            ? null
-            : CupertinoNavigationBarBackButton(
-                color: iconTheme!.color,
-                previousPageTitle: S.of(context).back,
-                onPressed: () => Navigator.of(context).pop(),
-              ),
         middle: title,
         padding: iconTheme == null
             ? null

@@ -147,7 +147,9 @@ class _BeerDetailState extends State<BeerDetail> {
                                     await viewModel.rateBeer(
                                         id: widget.beer.id);
                                   },
-                            child: const Text("Rate this beer")),
+                            disabledColor: Colors.grey[300],
+                            child: const Text("Rate this beer",
+                                style: TextStyle(color: Colors.white))),
                   ),
                 ),
               ),

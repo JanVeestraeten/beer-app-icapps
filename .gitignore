@@ -47,8 +47,4 @@ app.*.map.json
 /android/app/release
 
 # Generated files
-lib/generated
-pubspec.lock
 .fvm
-**.g.dart
-**.drift.dart
